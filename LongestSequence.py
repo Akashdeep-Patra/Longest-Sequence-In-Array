@@ -10,20 +10,22 @@ def longestSequence(a):
       continue
     value=key
     length=0
-    collector=[]
+    collector1=[]
     while(value in mem):
-      collector.append(value)
+      collector1.append(value)
       length+=1
       value+=1
       visited.add(value)
     value=key-1
+    collector2=[]
     while(value in mem):
-      collector.append(value)
+      collector2.append(value)
       value-=1
       length+=1
       visited.add(value)
     if(length>max_length):
       max_length=length
-      ans=collector
+      collector2.reverse()
+      ans=collector2+collector1
   return ans
 

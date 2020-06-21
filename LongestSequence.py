@@ -6,7 +6,7 @@ def longestSequence(a):
     mem[j]=i
   max_length=0
   for key in mem.keys():
-    if key in mem:
+    if key in visited:
       continue
     value=key
     length=0
